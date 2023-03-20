@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@color/background_color"
+    tools:context=".SignUpActivity">
+
+
+
+
+
+
+    <ImageView
+        android:paddingTop="5dp"
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logosq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/etxt_user_fullname"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="5dp"
+            android:inputType="text"
+            android:hint="الاسم"
+            android:layout_height="45dp"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/etxt_user_age"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="5dp"
+            android:inputType="number"
+            android:hint="العمر"
+            android:layout_height="45dp"/>
+        <LinearLayout
+
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:layout_height="wrap_content">
+            
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="تاريخ أول يوم من آخر دورة شهرية"/>
+        <DatePicker
+            android:id="@+id/date_lmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:headerBackground="@color/baby_pink"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+
+            />
+        </LinearLayout>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/etxt_cycle_length"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="5dp"
+            android:inputType="number"
+            android:hint="مدة الدورة الشهرية: الافتراضية 28"
+            android:layout_height="45dp"/>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/etxt_email"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="5dp"
+            android:inputType="text"
+            android:hint="البريد الالكتروني"
+            android:layout_height="45dp"/>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etxt_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_edittext_pink_border"
+                android:gravity="center_vertical|right"
+                android:hint="كلمة المرور"
+                android:layout_toRightOf="@id/btn_show_hide_password"
+                android:inputType="textPassword|text"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="5dp" />
+            <ImageView
+                app:tint="@color/black_overlay"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/btn_show_hide_password"
+                android:src="@drawable/ic_eye_visible_pass"
+                android:layout_width="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etxt_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_edittext_pink_border"
+                android:gravity="center_vertical|right"
+                android:hint="تأكيد كلمة المرور"
+                android:inputType="textPassword|text"
+                android:layout_toRightOf="@id/btn_show_hide_confirm_password"
+                android:layoutDirection="rtl"
+                android:paddingHorizontal="5dp" />
+            <ImageView
+                app:tint="@color/black_overlay"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/btn_show_hide_confirm_password"
+                android:src="@drawable/ic_eye_visible_pass"
+                android:layout_width="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_btn_round_corners"
+            android:paddingHorizontal="25dp"
+            android:layout_marginBottom="5dp"
+            android:text="تسجيل"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txt_go_signin"
+            android:layout_marginVertical="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@color/light_blue_900"
+            android:text="هل لديك حساب بالفعل؟"/>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

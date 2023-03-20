@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@color/background_color"
+    tools:context=".AdminManageRecipes">
+    <RelativeLayout
+        android:id="@+id/ly_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:id="@+id/logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logosq"
+            android:layout_centerInParent="true"
+            />
+        <ImageButton
+            android:background="@drawable/ic_baseline_home_24"
+            android:layout_margin="15dp"
+            android:id="@+id/btn_home"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_logo"
+        android:layout_centerHorizontal="true"
+        android:text="إدارة الوصفات"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ly_recipe_form"
+        android:layout_below="@id/main_label"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ly_recipe_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_round_rating"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/etxt_recipe_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:hint="اسم الوصفة"
+            android:inputType="text"
+            android:padding="3dp"
+            android:textDirection="rtl"
+            android:textSize="15sp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/etxt_recipe_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_edittext_pink_border"
+            android:hint="رابط الوصفة"
+            android:inputType="text"
+            android:padding="3dp"
+            android:textDirection="rtl"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="خاصة بالثلث" />
+
+            <RadioGroup
+                android:id="@+id/gp_trimester"
+                android:checkedButton="@id/rdb_trimester1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdb_trimester1"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+                <RadioButton
+                    android:id="@+id/rdb_trimester2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+                <RadioButton
+                    android:id="@+id/rdb_trimester3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+            </RadioGroup>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_send_recipe"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_btn_round_corners"
+                android:text="حفظ" />
+
+            <ProgressBar
+                android:id="@+id/progress_sending"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:visibility="invisible" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

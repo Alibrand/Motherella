@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881674945442",
+    "project_id": "motherella-90b3b",
+    "storage_bucket": "motherella-90b3b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881674945442:android:7974c1d7657592439e68fb",
+        "android_client_info": {
+          "package_name": "com.cpis498.motherella"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881674945442-lo2g9mja8ti9132vj0iri3qp48fcb8n7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTIbM17GJyUbPy2U3qfO26SNOWrS6HGw0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881674945442-lo2g9mja8ti9132vj0iri3qp48fcb8n7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

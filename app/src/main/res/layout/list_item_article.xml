@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/ly_article_button"
+        android:paddingHorizontal="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_btn_round_corners"
+            android:text="أهمية مراجعة طبيبك"
+            android:textColor="@color/white" />
+</RelativeLayout>
+    <ImageButton
+        android:visibility="gone"
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_alignBottom="@id/ly_article_button"
+        android:layout_gravity="left"
+        android:background="@drawable/ic_baseline_delete_24" />
+</RelativeLayout>
